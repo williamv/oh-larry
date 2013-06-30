@@ -41,8 +41,8 @@ def elevated_train
   prompt; walking_pace = gets.chomp.to_i
 
   if walking_pace >= 4
-	 puts "You hear the woosh of the train behind you. Lawrence is calm"
-	 eastern_parkway()
+	  puts "You hear the woosh of the train behind you. Lawrence is calm"
+	  eastern_parkway()
   elsif walking_pace < 4
     puts "You walked too slowly! The train is immediately overhead and Lawrence freaks out."
     game_over()
@@ -58,13 +58,13 @@ def eastern_parkway()
   prompt; street_side = gets.chomp.downcase
 
   if street_side.include? "left"
-	puts "You have no problems and get to Mount Prospect quickly."
-	mount_prospect()
+	  puts "You have no problems and get to Mount Prospect quickly."
+	  mount_prospect()
   elsif street_side.include? "right"
-	puts "As you walk along the apartments, the subway rolls underneath and he spazzes a bit."
-	game_over()
+	  puts "As you walk along the apartments, the subway rolls underneath and he spazzes a bit."
+	  game_over()
   else
-	clueless()
+	  clueless()
   end
 end
 
@@ -101,8 +101,8 @@ def new_dog()
   puts "A stray joins the pack and you want to name him. What should you call him?"
   prompt; stray_dog_name = gets.chomp.capitalize
   dog_park_dogs.push(stray_dog_name)
+  
   puts "Here are all the dogs here now:"
-
   for dog in dog_park_dogs
     puts "#{dog}"
   end
