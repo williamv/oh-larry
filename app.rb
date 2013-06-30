@@ -28,7 +28,7 @@ def classon_or_stmarks()
   	puts "Good call. You made it to Classon before school starts so it's not crowded."
   	eastern_parkway()
   elsif next_move.include? ("mark")
-  	puts "Bad move chump. You hit the boneyard."
+  	puts "Bad move chump. You hit the boneyard and have to dig chicken wings out of his throat."
   	game_over()
   else
   	clueless()
@@ -50,10 +50,6 @@ def elevated_train
   end
 end
 
-def game_over()
-  puts "The crazy munchkin has to go home. Oh, Larry!"
-end
-
 def eastern_parkway()
   puts "You're on tree lined eastern parkway."
   puts "What side of the street do you want to walk on?"
@@ -71,10 +67,6 @@ def eastern_parkway()
   end
 end
 
-def clueless()
-  puts "I have no idea what you mean. Try again."
-end
-
 def mount_prospect()
   puts "You make it to mount prospect. Did you bring treats?"
 
@@ -89,6 +81,14 @@ def mount_prospect()
   else
   	clueless()
   end
+end
+
+def clueless()
+  puts "I have no idea what you mean. Try again."
+end
+
+def game_over()
+  puts "The crazy munchkin has to go home. Oh, Larry!"
 end
 
 start()
