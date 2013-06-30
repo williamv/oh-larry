@@ -24,10 +24,10 @@ def classon_or_stmarks()
 
   prompt; next_move = gets.chomp.downcase
 
-  if next_move.include? ("class")
+  if next_move.include?("class")
   	puts "Good call. You made it to Classon before all the kids start going to school."
   	eastern_parkway()
-  elsif next_move.include? ("mark") or ("st") or ("saint")
+  elsif ["mark", "st","saint"].any? {|string| next_move.include?(string)}
   	puts "Bad move chump. You hit the boneyard and have to dig chicken wings out of his mouth."
   	game_over()
   else
@@ -94,8 +94,8 @@ end
 
 def new_dog()
   dog_park_dogs = ['Lawrence','Patty','Cara']
-  for dog in dog_park_dogs
-    puts "#{dog} is at the park with you."
+  dog_park_dogs.each do |dog|
+    puts "#{dog} is at the park with you"
   end
 
   puts "A stray joins the pack and you want to name him. What should you call him?"
@@ -103,8 +103,8 @@ def new_dog()
   dog_park_dogs.push(stray_dog_name)
   
   puts "Here are all the dogs here now:"
-  for dog in dog_park_dogs
-    puts "#{dog}"
+  dog_park_dogs.each do |dog|
+    puts "#{dog} is at the park with you"
   end
 end 
 
